@@ -1,10 +1,11 @@
+var myvar = document.querySelector("#paraid");
 
-var myVar = document.querySelector("#paragraph");
-
-function myMessage1(){
-    myVar.src = "img/f2.png";
+function msg1(){
+    myvar.src = "img/f2.png";
 }
 
-function myMessage2(){
-    myVar.src = "img/f5.png";
+function msg2(){
+    myvar.src = "img/f5.png";
 }
+
+

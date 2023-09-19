@@ -1,12 +1,10 @@
 
-var change = document.getElementById("paragraph");
+var pTag = document.querySelector(".paragraph");
 
 function addStyle(){
-
-    change.classList.add("para-style");
+    pTag.classList.add("para")
 }
 
 function removeStyle(){
-    
-    change.classList.remove("para-style");
+    pTag.classList.remove("para")
 }

@@ -1,7 +1,6 @@
 
-
-.para-style{
-    color: rebeccapurple;
+.para{
     font-size: 3rem;
-    font-style: italic;
+    color: turquoise;
+    background-color: #000;
 }

@@ -1,8 +1,9 @@
 
 
 
-document.querySelectorAll("p")[0].innerHTML = "this is text 1";
+/*var changed = document.querySelector("#pid");
+changed.innerHTML = "jumble word";
 
-document.querySelectorAll("p")[1].innerHTML = "this is text 2";
 
-
+var changed = document.querySelector(".pid");
+changed.innerHTML = "Rearranged word";*/

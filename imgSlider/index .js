@@ -1,15 +1,18 @@
+
+
+
 var imgArray = ["img/f1.png", "img/f2.png", "img/f3.png"];
-var selector = document.getElementById("img");
+var btn = document.querySelector("#img");
 var count = 0;
 
 function next(){
     count++;
-    if (count>=imgArray.length){
+    if(imgArray.length<=count){
         count = 0;
-        selector.src = imgArray[count];
+        btn.src = imgArray[count];
     }
     else{
-        selector.src = imgArray[count];
+        btn.src = imgArray[count];
     }
 }
 
@@ -17,9 +20,9 @@ function previous(){
     count--;
     if(count<0){
         count = imgArray.length - 1;
-        selector.src = imgArray[count];
+        btn.src = imgArray[count];
     }
     else{
-        selector.src = imgArray[count];
+        btn.src = imgArray[count];
     }
 }

@@ -1,21 +1,26 @@
-var btn = document.getElementById("btn");
-btn.addEventListener("mouseout", clickFunction);
+var btn = document.querySelector("button");
 
-function clickFunction(){
-    alert("hello");
+btn.addEventListener("click",myBtn)
+
+function myBtn(){
+    alert("hlw");
 }
 
+//---------------------------------------------
 
-var h1 = document.getElementById("h1");
-h1.addEventListener("mouseover", 
+var myHeading = document.querySelector("h1");
+
+
+myHeading.addEventListener(
+    "mouseover",
     function(){
-        h1.classList.add("my-style");
+        myHeading.classList.add("style");
     }
 )
 
-var h1 = document.getElementById("h1");
-h1.addEventListener("mouseout", 
+myHeading.addEventListener(
+    "mouseout",
     function(){
-        h1.classList.remove("my-style");
+        myHeading.classList.remove("style");
     }
 )
