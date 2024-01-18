@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb on || off</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        h1 {
+            font-weight: normal;
+            text-transform: capitalize;
+            letter-spacing: 1.5px;
+            text-align: center;
+            color: #d1a132;
+        }
+
+        .bulb-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 65vh;
+            gap: 20px;
+        }
+
+        .bulb {
+            border: 4px solid #000;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: transparent;
+        }
+
+        .bulb-switch {
+            border: none;
+            outline: none;
+            padding: 11px 33px;
+            font-size: 20px;
+            font-weight: 600;
+            color: #e9b72d;
+            background-color: #1e3370;
+            border: 3px solid #fff;
+            overflow: hidden;
+            border-radius: 14px;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="user-switch">Default Mode</button>
+    <h1>light is <span>off</span></h1>
+    <div class="bulb-container">
+        <div class="bulb "></div>
+    </div>
+    <button class="bulb-switch">On</button>
+
+    <script>
+
+        // for body
+        const body = document.querySelector("body");
+        let bodyFlag = 0;
+
+        // for bulb
+        const btn = document.querySelector(".bulb-switch");
+        const bulb = document.querySelector(".bulb");
+        let bulbFlag = 0;
+        const span = document.querySelector("span");
+
+        const bodyFunctionality = () => {
+            if (bodyFlag === 0) {
+                body.style.backgroundColor = "#000";
+                bulb.style.borderColor = "#fff";
+                bodyFlag = 1;
+            } else {
+                body.style.backgroundColor = "#fff";
+                bulb.style.borderColor = "#000";
+                bodyFlag = 0;
+            }
+        };
+
+        const bulbFunctionality = () => {
+            if (bulbFlag === 0) {
+                bulb.style.backgroundColor = '#fbc531';
+                btn.textContent = "Off";
+                span.textContent = 'On';
+                bulbFlag = 1;
+            } else {
+                bulb.style.backgroundColor = 'transparent';
+                btn.textContent = "On";
+                span.textContent = 'Off';
+                bulbFlag = 0;
+            }
+        };
+
+        document.querySelector(".user-switch").addEventListener('click', () => {
+            bodyFunctionality();
+        });
+
+        btn.addEventListener('click', () => {
+            bulbFunctionality();
+        });
+
+
+    </script>
+
+</body>
+
+</html>
