@@ -1,0 +1,49 @@
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background-color: #413839;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.secondary{
+    border: 3px solid #eaffdc;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.main .secondary input{
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    text-align: right;
+}
+
+.main .secondary button{
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    border: none; 
+    outline: none; 
+    background-color: #5b5b5b;
+    color: #fff;
+    font-size: 18px;
+    margin: 5px; 
+    cursor: pointer;
+}
