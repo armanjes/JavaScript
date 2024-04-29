@@ -12,7 +12,7 @@
 ✅ 11.Scope and Hoisting ✔
 ✅ 12.Error Handling ✔
 ✅ 13.JSON ✔
-✅ 14.higher Order Functions {map(), filter(), reduce()} ✔
+✅ 14.higher Order Functions ✔
 
 🎁 es6
 ✅ let & const ✔
