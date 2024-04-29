@@ -1,7 +1,8 @@
 /**
 ✅ Variables and Data Types:
 Variables are containers for storing data values.
-JavaScript has "dynamic typing", meaning you "don't need to specify data types" when declaring variables.
+JavaScript has "dynamic typing", meaning you "don't need to specify data types when declaring variables.
+🔥 NOTE: JS is case sensitive
 
 we use var, let, const keyword to declare variables
 🚀 var -> function scope
