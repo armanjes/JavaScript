@@ -18,7 +18,7 @@ console.log(array);
 console.log(typeof array); // output object
 console.log(Array.isArray(array)); 
 
-// ✅
+// ✅ 
 for (let i = 0; i < array.length; i++) {
     console.log(array[i]);
 }
