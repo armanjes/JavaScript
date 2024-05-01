@@ -111,7 +111,7 @@ let nums = [1, 2, 3, 4, 5]
 let mix1 = [...chars, ...nums]
 let mix = [...chars, nums] // difference
 console.log(mix1);
-console.log(mix);
+console.log(mix); 
 
 // 🚀 flat()
 
