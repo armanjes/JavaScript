@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 300px;
+        height: 300px;
+        background-color: antiquewhite;
+        border: 1px solid gainsboro;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Mouse event</h1>
+    <div class="box" id="myElement">
+      <span class="x">X:0</span>
+      <span class="y">Y:0</span>
+    </div>
+    <!-- js code -->
+    <script>
+      // 🚀 Mouse events: click, dblclick, oncontextmenu, mouseover, mouseout, mousedown, mouseup, mousemove.
+
+      // Event handler functions
+      function handleClick(event) {
+        console.log("Element clicked!");
+      }
+
+      function handleMouseOver(event) {
+        console.log("Mouse entered element!");
+      }
+
+      function handleMouseOut(event) {
+        console.log("Mouse left element!");
+      }
+
+      function handleMouseMove(event) {
+        const x = document.querySelector(".x");
+        const y = document.querySelector(".y");
+        x.textContent = event.pageX; // Mouse X position relative to the element
+        y.textContent = event.pageY; // Mouse Y position relative to the element
+      }
+
+      // Add event listeners to an element
+      const element = document.getElementById("myElement");
+      element.addEventListener("click", handleClick);
+      element.addEventListener("mouseover", handleMouseOver);
+      element.addEventListener("mouseout", handleMouseOut);
+      element.addEventListener("mousemove", handleMouseMove);
+    </script>
+  </body>
+</html>
