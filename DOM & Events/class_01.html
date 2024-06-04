@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Selecting DOM Element</h1>
+    <div class="example">This is a div with class "example".</div>
+    <div class="example">This is another div with class "example".</div>
+    <div class="example">This is yet another div with class "example".</div>
+
+    <div id="uniqueElement">This is a div with the ID "uniqueElement".</div>
+    <div id="uniqueElement">This is a div with the ID "uniqueElement".</div>
+    <div id="uniqueElement">This is a div with the ID "uniqueElement".</div>
+
+    <ul>
+        <li class="list">This is list 1</li>
+        <li class="list">This is list 2</li>
+        <li class="list">This is list 3</li>
+        <li class="list">This is list 4</li>
+    </ul>
+
+    <!-- js code -->
+    <script>
+
+        // ✅ the getElementsByClassName() method returns a collection of all elements in the document that have the specified class name. We can loop through on them by converting them into an array using Array.from()
+        const elements = document.getElementsByClassName('example')
+        console.log(elements);
+        console.log(elements[1]);
+        Array.from(elements).map( element => console.log(element))
+
+        // ✅ getElementById() method  method in JavaScript returns only the first element that matches the specified ID. an ID attribute must be unique within the entire document. Therefore, even if there are multiple elements with the same ID, getElementById() will return only the first one it encounters.
+
+        const uniqueId = document.getElementById('uniqueElement')
+        console.log(uniqueId);
+
+        // 🚀 If you need to select multiple elements with the same identifier, you should use other methods such as getElementsByClassName() or querySelectorAll(), which allow you to select elements based on classes or CSS selectors, respectively.
+
+        // ✅ querySelector() It returns the first element that matches the provided selector(s), making it ideal for targeting unique elements.
+
+        const uniqueIds = document.querySelector("#uniqueElement")
+        console.log(uniqueIds);
+
+        // 🚀 If you need to select multiple matching elements, use querySelectorAll().
+        // ✅ querySelectorAll() returns A live NodeList containing Element objects for each matching element, or an empty NodeList if none are found. We can use forEach() on it. We can't use map, filter or reduce since Its not a true array. How ever we can convert It in an array using spread operator or Array.from() method.
+
+        const listElements = document.querySelectorAll('.list')
+        console.log(listElements);
+        console.log(listElements[2]);
+        listElements.forEach( e => console.log(e))
+        const listElementsArray = [...listElements]
+        listElementsArray.map(e => console.log(e))
+
+    </script>
+</body>
+</html>
