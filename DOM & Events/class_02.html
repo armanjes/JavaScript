@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM Manipulation</h1>
+    <p class="change-bg">red background text</p>
+    <p class="h1">that was h1 tag</p>
+    <p class="p"></p>
+    <p id="p"></p>
+
+
+    <div id="example">
+        <p>This is <strong>important</strong> information.</p>
+        <p class="hidden">This paragraph is hidden.</p>
+    </div>
+
+    <!-- js code -->
+    <script>
+        //✅ we can manipulate style 
+        const element = document.querySelector(".change-bg")
+        element.style.backgroundColor = "red"
+        element.style.color = 'yellow'
+        element.style.padding = '10px'
+        element.style.marginTop = '10px'
+
+        //✅ We can modify the content of elements
+
+        const h1 = document.querySelector('.h1')
+        const p = document.querySelector('.p')
+        const pId = document.querySelector('#p')
+
+        //🚀 "innerHTML" when you need to manipulate HTML content with HTML tags.
+        h1.innerHTML = 'Hi this new <strong>element</strong>';
+
+        //🚀 "textContent" for plain text manipulation without interpreting HTML tags.
+        p.textContent = 'this is <strong>p</strong>'
+
+        //🚀 "innerText" when you need to consider styling and visibility, especially for user-visible content.
+        p.innerText = 'this is another p'
+        const elements = document.getElementById('example');
+
+        // Using textContent
+        console.log("textContent:");
+        console.log(elements.textContent); // Output: "This is important information. This paragraph is hidden."
+
+        // Using innerText
+        console.log("innerText:");
+        console.log(elements.innerText); // Output: "This is important information."
+    </script>
+</body>
+</html>
