@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        *{
-            font-family: sans-serif;
-            text-align: justify;
-        }
+      * {
+        font-family: sans-serif;
+        text-align: justify;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Introduction to events</h1>
     <button class="clickbtn">click here</button>
     <!-- js code -->
     <script>
-        //✅ Event
+      //✅ Event
 
-        // 🚀 Event occurs: An event is triggered by a user action or other source.
+      // 🚀 Event occurs: An event is triggered by a user action or other source.
 
-        const btn = document.querySelector(".clickbtn")
-        btn.addEventListener('click', () => console.log('btn clicked'))
+      const btn = document.querySelector(".clickbtn");
+      btn.addEventListener("click", () => console.log("btn clicked"));
 
-        // 🚀 Event object creation: When an event occurs, an event object is created and passed to the event handler function. The browser creates an Event object containing information about the event, such as the type of event, target element, and any additional details. Event handlers can access this event object to get details about the event that occurred.
-        
-        // 🚀 Event handling: If an event listener is attached to an element in the event's path, the corresponding event handler function is executed with the event object as an argument.
+      // 🚀 Event object creation: When an event occurs, an event object is created and passed to the event handler function. The browser creates an Event object containing information about the event, such as the type of event, target element, and any additional details. Event handlers can access this event object to get details about the event that occurred.
 
-        btn.addEventListener('click', (e) => {
-            console.log(e);
-            console.log(e.type); // click event
-            console.log(e.target); // gives the element
-            console.log(e.clientX); // gives mouse position in X axis
-            console.log(e.clientY); // gives mouse position in Y axis
-        })
+      // 🚀 Event handling: If an event listener is attached to an element in the event's path, the corresponding event handler function is executed with the event object as an argument.
+
+      btn.addEventListener("click", (e) => {
+        console.log(e);
+        console.log(e.type); // click event
+        console.log(e.target); // gives the element
+        console.log(e.clientX); // gives mouse position in X axis
+        console.log(e.clientY); // gives mouse position in Y axis
+      });
     </script>
-</body>
+  </body>
 </html>
