@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        h1{
+            text-align: center;
+        }
+        .btn-container{
+            margin: 20px;
+            text-align: center;
+        }
+        .red-body{
+            background-color: red;
+        }
+        .green-body{
+            background-color: green;
+        }
+        .reset-body{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Color Flipper</h1>
+    <div class="btn-container">
+        <button class="red">Red</button>
+        <button class="green">Green</button>
+        <button class="reset">Reset</button>
+    </div>
+
+    <script>
+        const body = document.querySelector("body")
+        const red = document.querySelector('.red')
+        const green = document.querySelector('.green')
+        const reset = document.querySelector('.reset')
+
+        // local storage
+        function addClassList(className){
+            body.className= ''
+            body.classList.add(className)
+            localStorage.setItem('bodyClass', className)
+        }
+
+        red.addEventListener('click', () =>{
+            // body.classList.add('red-body')
+            // body.classList.remove('green-body')
+            // body.classList.remove('reset-body')
+            addClassList('red-body')
+        })
+
+        green.addEventListener('click', () =>{
+            // body.classList.add('green-body')
+            // body.classList.remove('red-body')
+            // body.classList.remove('reset-body')
+            addClassList('green-body')
+        })
+
+        reset.addEventListener('click', () =>{
+            // body.classList.add('reset-body')
+            // body.classList.remove('red-body')
+            // body.classList.remove('green-body')
+            addClassList('reset-body')
+        })
+
+        // On page load, apply the saved class from localStorage
+        window.addEventListener('load', ()=> {
+            const savedClass = localStorage.getItem('bodyClass')
+            if(savedClass){
+                body.classList.add(savedClass)
+            } else{
+                body.classList.add('reset-body')
+            }
+        })
+
+    </script>
+</body>
+</html>
