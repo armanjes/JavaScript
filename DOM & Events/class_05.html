@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>keyboard event</h1>
+
+    <script>
+      // 🚀 keyup and keydown
+      document.addEventListener("keyup", (e) => {
+        console.log(e); //keyboardEvent
+        console.log(e.key); // displays the pressed key
+        console.log(e.keyCode); // gives code of the key
+        console.log(e.altKey);
+      });
+    </script>
+  </body>
+</html>
