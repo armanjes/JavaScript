@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <!-- <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: black;
+        color: white;
+        font-family: sans-serif;
+      }
+      .accordion {
+        max-width: 700px;
+        margin: 30px auto;
+        border: 1px solid #ffefef;
+        border-radius: 14px;
+        padding: 10px;
+      }
+      .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 26px;
+        cursor: pointer;
+      }
+
+      .accordion .title i{
+        transition: transform .4s ease-in-out;
+      }
+      .body {
+        font-size: 20px;
+        margin-top: 10px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s ease-in-out;
+      }
+
+      .accordion.active .body {
+        max-height: 300px;
+      }
+
+      .accordion.active .title i {
+      transform: rotate(180deg);
+      }
+    </style> -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: black;
+        color: white;
+        font-family: sans-serif;
+      }
+
+      .accordion{
+        max-width: 700px;
+        border: 1px solid #ffe5ef;
+        border-radius: 4px;
+        margin: 30px auto;
+        padding: 10px;        
+      }
+
+      .question{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 26px;
+      }
+
+      .answer{
+        max-height: 0;
+        overflow: hidden;
+        font-size: 22px;
+        transition: max-height .6s ease-in-out;
+      }
+
+      .accordion.active .answer{
+        max-height: 300px;
+      }
+
+      .question i{
+        transition: transform .4s ease-in-out;
+      }
+      .accordion.active .question i{
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="accordion active">
+        <div class="question">
+          <h3>Title</h3>
+          <i class="ri-arrow-up-wide-line"></i>
+        </div>
+        <article class="answer">
+          <hr>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quas necessitatibus ut aperiam nemo consequuntur earum eveniet fugit non eos, numquam omnis autem perferendis facere! Harum dignissimos esse voluptatem corrupti.
+        </article>
+      </div>
+
+      <div class="accordion">
+        <div class="question">
+          <h3>Title</h3>
+          <i class="ri-arrow-up-wide-line"></i>
+        </div>
+        <article class="answer">
+          <hr>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quas necessitatibus ut aperiam nemo consequuntur earum eveniet fugit non eos, numquam omnis autem perferendis facere! Harum dignissimos esse voluptatem corrupti.
+        </article>
+      </div>
+
+      <div class="accordion">
+        <div class="question">
+          <h3>Title</h3>
+          <i class="ri-arrow-up-wide-line"></i>
+        </div>
+        <article class="answer">
+          <hr>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quas necessitatibus ut aperiam nemo consequuntur earum eveniet fugit non eos, numquam omnis autem perferendis facere! Harum dignissimos esse voluptatem corrupti.
+        </article>
+      </div>
+
+      <div class="accordion">
+        <div class="question">
+          <h3>Title</h3>
+          <i class="ri-arrow-up-wide-line"></i>
+        </div>
+        <article class="answer">
+          <hr>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quas necessitatibus ut aperiam nemo consequuntur earum eveniet fugit non eos, numquam omnis autem perferendis facere! Harum dignissimos esse voluptatem corrupti.
+        </article>
+      </div>
+    </section>
+    <!-- js code -->
+
+    <script>
+      const accordions = document.querySelectorAll('.accordion')
+      accordions.forEach( accordion => {
+        accordion.addEventListener('click', () => {
+          accordion.classList.toggle('active')
+        })
+      })
+    </script>
+  </body>
+</html>
