@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      background-color: #333;
+      color: white;
+    }
+    .parent {
+      max-width: 700px;
+      height: 40vh;
+      margin: 30px auto;
+      border: 1px solid red;
+      border-radius: 4px;
+    }
+    .parent form {
+      max-width: 65%;
+      height: 50%;
+      border: 2px dotted dodgerblue;
+      margin: 40px;
+    }
+    .parent form input {
+      margin: 14px;
+      background-color: #00ffff73;
+    }
+  </style>
+  <body>
+    <h1>Event propagation</h1>
+    <!-- event bubbling -->
+    <div class="parent">
+      <form class="form">
+        <input class="btn" type="button" value="event bubbling" />
+      </form>
+    </div>
+    <!-- event capturing -->
+    <div class="grand-parent">
+      <form class="parnet">
+        <input class="child" type="button" value="event capturing" />
+      </form>
+    </div>
+  </body>
+
+  <!-- js code -->
+  <script>
+    /*✅ Event Propagation: Event propagation refers to the mechanism by which events are transmitted through the DOM hierarchy. 
+    There are two phases of event propagation: capturing phase and bubbling phase.*/
+
+    /*  🚀 Bubbling Phase: During the bubbling phase, 
+    events bubbles from child to parent. */
+
+    const div = document.querySelector(".parent");
+    const form = document.querySelector(".form");
+    const btn = document.querySelector(".btn");
+
+    function listener(e) {
+      console.log(this);
+      //   console.log(e.currentTarget);
+    }
+
+    // btn.addEventListener("click", listener);
+    // form.addEventListener("click", listener);
+    // div.addEventListener("click", listener);
+
+    /*
+    🚀 Capturing Phase: During the capturing phase also known as trickling, events are dispatched parent to child.
+    The sequence of event propagation (capturing or bubbling) can be controlled using the third argument (useCapture) of the addEventListener() method. 
+    Passing true to this argument enables event capturing, while passing false(default) enables event bubbling.
+    */
+
+    btn.addEventListener("click", listener, true);
+    form.addEventListener("click", listener, true);
+    div.addEventListener("click", listener, true);
+  </script>
+</html>
