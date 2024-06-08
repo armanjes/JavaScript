@@ -12,24 +12,24 @@
       box-sizing: border-box;
       background-color: #333;
       color: #e5e5e5;
+      font-family: sans-serif;
     }
 
-    .root{
-        margin: 30px auto;
-        max-width: 600px;
-        border: 1px solid #646464;
-        border-radius: 14px;
-        padding: 10px;
+    .root {
+      margin: 30px auto;
+      max-width: 600px;
+      border: 1px solid #646464;
+      border-radius: 14px;
+      padding: 10px;
     }
 
-    .album{
-        border-bottom: 2px dotted #888;
-        padding: 10px 0;
-        font-family: sans-serif;
+    .album {
+      border-bottom: 2px dotted #888;
+      padding: 10px 0;
     }
 
-    .album:last-child{
-        border-bottom: none;
+    .album:last-child {
+      border-bottom: none;
     }
   </style>
   <body>
@@ -39,26 +39,26 @@
     <script>
       const root = document.querySelector(".root");
       const fetchData = async (api) => {
-        let req = await fetch(api);
         try {
+          let req = await fetch(api);
           if (!req.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
           }
           let results = await req.json();
-          results.forEach(({id, userId, title}) => {
+          results.forEach(({ id, userId, title }) => {
             // const {id, userId, title} = result
             const album = document.createElement("div");
-            album.classList.add('album')
+            album.classList.add("album");
 
             const idTag = document.createElement("p");
             idTag.textContent = `ID: ${id}`;
-            
+
             const userIdTag = document.createElement("p");
             userIdTag.textContent = `user id: ${userId}`;
 
             const titleTag = document.createElement("p");
             titleTag.textContent = `Title: ${title}`;
-            
+
             album.append(idTag);
             album.append(userIdTag);
             album.append(titleTag);
@@ -67,6 +67,7 @@
           });
         } catch (error) {
           console.error(error);
+          root.innerHTML = "<h1>Something went wrong! Please try again later.</h1>";
         }
       };
       fetchData("https://jsonplaceholder.typicode.com/albums");
