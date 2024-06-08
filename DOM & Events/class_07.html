@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        background-color: #333;
+        color: #fff;
+      }
+      ul {
+        border: 2px dotted dodgerblue;
+        display: inline-block;
+        font-size: 24px;
+        padding: 40px;
+        margin: 0 auto;
+      }
+      ul li {
+        margin: 20px;
+      }
+      ul {
+        background-color: #585858;
+      }
+      li {
+        background-color: #a2b3ff80;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Event delegation</h1>
+    <ul>
+      <li>Python</li>
+      <li>Java</li>
+      <li>JavaScript</li>
+      <li>Rust</li>
+      <li>Go</li>
+      <li>Pearl</li>
+    </ul>
+  </body>
+  <!-- js code -->
+  <script>
+     /*
+     ✅ Event Delegation: Event delegation is a technique where you attach a single event handler to the parent of multiple elements.
+     This handler then watches for events that bubble up from the child elements.
+     It's particularly useful when working with dynamically created or large numbers of elements.
+     Event bubbling describes the propagation of events through the DOM hierarchy,
+     while event delegation is a technique for handling events efficiently by attaching a single event listener to a parent element.
+     */
+    const ul = document.querySelector('ul')
+    ul.addEventListener('click', (e) =>{
+     if(e.target.matches('li')){
+       e.target.style.backgroundColor = 'red'
+     }
+    })
+  </script>
+</html>
