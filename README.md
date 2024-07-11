@@ -1,6 +1,6 @@
 <div align='center'>
 
-<img src=https://media0.giphy.com/media/ln7z2eWriiQAllfVcn/giphy.gif?cid=6c09b9520pv9se8ldbevmfjeg9dgttal7p1sd55yz6047dqr&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=s alt="logo" width=400 height=200 />
+<img src=https://img-c.udemycdn.com/course/480x270/5450776_0385.jpg alt="logo" width=400 height=200 />
 
 <h1>🚀 JS Basics 🚀 JS Functional Programming 🚀 JS DOM & Events 🚀 Asynchronous JS and more....</h1>
 <p>✅ This repository contains a collection of JavaScript projects that build on a strong foundation of essential JavaScript topics. Initially, it covers fundamental concepts such as variables, functions, objects, and the DOM. Following this, the repository includes various practical projects that demonstrate the application of these concepts in real-world scenarios. These projects highlight key skills like asynchronous programming, event handling, and API integration, providing a comprehensive learning experience for mastering JavaScript.</p>
