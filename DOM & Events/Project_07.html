@@ -109,19 +109,7 @@
 
             // password toggle functionality
             checkbox.addEventListener("change", function () {
-                if (this.checked) {
-                    showPassword.value = password.value;
-                    showPassword.classList.remove("hide");
-                    password.classList.add("hide");
-                } else {
-                    showPassword.classList.add("hide");
-                    password.classList.remove("hide");
-                }
-            });
-
-            // prevent form page reload
-            form.addEventListener("submit", (e) => {
-                if (this.checked) {
+            if (this.checked) {
                 showPassword.value = password.value;
                 showPassword.classList.remove("hide");
                 password.classList.add("hide");
@@ -130,7 +118,19 @@
                 showPassword.classList.add("hide");
                 password.classList.remove("hide");
             }
-            });
+        });
+
+        // prevent form page reload
+        form.addEventListener("submit", (e) => {
+            if (password.value.length < 8) {
+                e.preventDefault()
+                passwordMsg.style.display = "block"
+                return;
+            } else {
+                e.preventDefault()
+                passwordMsg.style.display = "none"
+                console.log("form submitted");
+            }
         </script>
     </body>
 </html>
