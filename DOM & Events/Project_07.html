@@ -43,6 +43,11 @@
                 margin-right: 5px;
             }
 
+            .password-msg{
+            color: red;
+            display: none;
+        }
+
             label {
                 cursor: pointer;
                 margin-bottom: 8px;
@@ -89,6 +94,9 @@
                     placeholder="Enter password"
                     required
                 />
+                <p class="password-msg">
+            Password at least 8 character
+            </p>
                 <input
                     type="checkbox"
                     class="checkbox"
@@ -106,6 +114,7 @@
             const checkbox = document.querySelector(".checkbox");
             const password = document.querySelector(".password");
             const showPassword = document.querySelector(".show-password");
+            const passwordMsg = document.querySelector(".password-msg")
 
             // password toggle functionality
             checkbox.addEventListener("change", function () {
