@@ -47,6 +47,7 @@
                 cursor: pointer;
                 margin-bottom: 8px;
                 display: inline-block;
+                user-select: none;
             }
 
             .form .login-btn {
@@ -120,8 +121,15 @@
 
             // prevent form page reload
             form.addEventListener("submit", (e) => {
-                e.preventDefault();
-                console.log("form submitted");
+                if (this.checked) {
+                showPassword.value = password.value;
+                showPassword.classList.remove("hide");
+                password.classList.add("hide");
+            } else {
+                password.value = showPassword.value
+                showPassword.classList.add("hide");
+                password.classList.remove("hide");
+            }
             });
         </script>
     </body>
