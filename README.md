@@ -31,4 +31,4 @@ see `contributing.md` for ways to get started
 
 arman - - mdarmanjes@gmail.com
 
-Project Link: [https://github.com/armanjes/Python](https://github.com/armanjes/JavaScript)
+Project Link: [https://github.com/armanjes/JavaScript](https://github.com/armanjes/JavaScript)
